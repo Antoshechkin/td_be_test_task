@@ -23,3 +23,4 @@ services:
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
     App\Interfaces\Api\v1\ICarService: '@App\Services\Api\v1\CarService'
+    App\Interfaces\Api\v1\ICreditService: '@App\Services\Api\v1\CreditService'

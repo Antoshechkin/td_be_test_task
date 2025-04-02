@@ -7,6 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Serializer\Normalizer\AbstractNormalizer;
+use Throwable;
 
 #[Route('/api/v1/cars')]
 final class CarController extends AbstractController
@@ -18,7 +19,7 @@ final class CarController extends AbstractController
         $this->carService = $carService;
     }
 
-    #[Route('/', methods: ['GET'])]
+    #[Route('/', methods: ['GET'], format: 'json')]
     public function getCars(): JsonResponse
     {
         try {
@@ -28,12 +29,12 @@ final class CarController extends AbstractController
                 AbstractNormalizer::IGNORED_ATTRIBUTES => ['model']
             ]);
         }
-        catch (\Throwable $exception) {
+        catch (Throwable $exception) {
             return $this->json(['message' => $exception->getMessage()]);
         }
     }
 
-    #[Route('/{id}', methods: ['GET'])]
+    #[Route('/{id}', methods: ['GET'], format: 'json')]
     public function getCarById(int $id): JsonResponse
     {
         try {
@@ -41,7 +42,7 @@ final class CarController extends AbstractController
 
             return $this->json($car);
         }
-        catch (\Throwable $exception) {
+        catch (Throwable $exception) {
             return $this->json(['message' => $exception->getMessage()]);
         }
     }

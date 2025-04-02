@@ -23,9 +23,8 @@ readonly class CarService implements ICarService
     {
         $car = $this->carRepository->findOneBy(['id' => $id]);
 
-        if (is_null($car)) {
+        if (is_null($car))
             throw new NotFoundHttpException('Car not found');
-        }
 
         return $car;
     }
