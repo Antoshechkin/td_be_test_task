@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "1d4d8cad-3378-45d5-bc61-ed7e8b7cfddf",
+		"name": "td_be_test_task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25243367"
+	},
+	"item": [
+		{
+			"name": "/api/v1/cars/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v1/cars/4",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"cars",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/cars",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v1/cars",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"carId\": 4,\r\n    \"programId\": 2,\r\n    \"initialPayment\": 1500000,\r\n    \"loanTerm\": 60\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/v1/request",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/credit/calculate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v1/credit/calculate?price=3153800&initialPayment=2500000&loanTerm=60",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"credit",
+						"calculate"
+					],
+					"query": [
+						{
+							"key": "price",
+							"value": "3153800"
+						},
+						{
+							"key": "initialPayment",
+							"value": "2500000"
+						},
+						{
+							"key": "loanTerm",
+							"value": "60"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
