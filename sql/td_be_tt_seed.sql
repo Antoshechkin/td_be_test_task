@@ -24,6 +24,28 @@ INSERT INTO `brand` (`id`, `name`) VALUES
 	(3, 'Mercedes-Benz'),
 	(4, 'Toyota');
 
+-- Дамп данных таблицы td_be_test_task.model: ~19 rows (приблизительно)
+INSERT INTO `model` (`id`, `name`) VALUES
+    (4, '3-series'),
+    (5, '5-series'),
+    (6, '7-series'),
+    (1, 'A4'),
+    (2, 'A6'),
+    (3, 'A8'),
+    (7, 'C-class'),
+    (10, 'Camry'),
+    (11, 'Corolla'),
+    (8, 'E-class'),
+    (12, 'IS-250'),
+    (13, 'LX-570'),
+    (14, 'Rio'),
+    (9, 'S-class'),
+    (19, 'Santa-Fe'),
+    (17, 'Solaris'),
+    (16, 'Sorento'),
+    (15, 'Sportage'),
+    (18, 'Tucson');
+
 -- Дамп данных таблицы td_be_test_task.car: ~19 rows (приблизительно)
 INSERT INTO `car` (`id`, `brand_id`, `model_id`, `price`, `photo`) VALUES
 	(1, 1, 1, 3153800, 'img1.png'),
@@ -65,28 +87,6 @@ INSERT INTO `doctrine_migration_versions` (`version`, `executed_at`, `execution_
 	('DoctrineMigrations\\Version20250401091627', '2025-04-01 09:17:08', 9),
 	('DoctrineMigrations\\Version20250402081707', '2025-04-02 08:18:43', 20),
 	('DoctrineMigrations\\Version20250402161700', '2025-04-02 16:17:38', 94);
-
--- Дамп данных таблицы td_be_test_task.model: ~19 rows (приблизительно)
-INSERT INTO `model` (`id`, `name`) VALUES
-	(4, '3-series'),
-	(5, '5-series'),
-	(6, '7-series'),
-	(1, 'A4'),
-	(2, 'A6'),
-	(3, 'A8'),
-	(7, 'C-class'),
-	(10, 'Camry'),
-	(11, 'Corolla'),
-	(8, 'E-class'),
-	(12, 'IS-250'),
-	(13, 'LX-570'),
-	(14, 'Rio'),
-	(9, 'S-class'),
-	(19, 'Santa-Fe'),
-	(17, 'Solaris'),
-	(16, 'Sorento'),
-	(15, 'Sportage'),
-	(18, 'Tucson');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
